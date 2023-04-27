@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WhatsappNoContact.MainPage">
+
+    <Grid>
+        <Image Source="{AppThemeBinding Light=bg_light.jpg, Dark=bg_dark.jpg}" Aspect="AspectFill" />
+
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,30"
+            VerticalOptions="CenterAndExpand"
+            BackgroundColor="{AppThemeBinding Light=#70707070, Dark=Transparent}"
+        >
+
+            <Label 
+                Text="Enter the phone number:" 
+                SemanticProperties.HeadingLevel="Level3"
+                SemanticProperties.Description="Enter the phone number (include coutry code)"
+                FontSize="16"
+                TextColor="White"
+            />
+            <Label 
+                Margin="0,-25,0,0"
+                Text="remember to include the coutry code" 
+                SemanticProperties.HeadingLevel="Level9"
+                FontSize="12"
+                TextColor="White"
+            />
+
+            <Entry 
+                x:Name="phoneNumber" 
+                FontSize="25"
+                Keyboard="Telephone"
+                TextChanged="OnPhoneNumberTextChanged"
+                HorizontalTextAlignment="Center"
+                ClearButtonVisibility="WhileEditing"
+                Placeholder="Phone number"
+                Completed="OnStartChatBtnClicked"
+                IsTextPredictionEnabled="False"
+                IsSpellCheckEnabled="False"
+                MaxLength="20"
+                ReturnType="Go"
+                TextColor="White"
+            />
+
+            <Button 
+                x:Name="startChatBtn"
+                Text="💬 Start chat" 
+                SemanticProperties.Hint="Stat a whatsapp chat with the number entered without creating a contact"
+                Clicked="OnStartChatBtnClicked" 
+                FontSize="30"
+                FontAttributes="Bold"
+                BackgroundColor="#41c151"
+                TextColor="White"
+                IsEnabled="False"
+            />
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
