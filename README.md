@@ -38,5 +38,9 @@ dotnet publish -f net7.0-android -c Release
   <img src="./imgs/android%20light.jpg" width="300" />
 </p>
 
+## Don't you want to build it?
+
+then just download it from [releases](https://github.com/jjavierdguezas/whatsapp-no-contact/releases)
+
 ---
 _thanks to ChatGPT for the icon and helping me juggle fixing some obscure issues_
